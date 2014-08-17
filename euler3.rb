@@ -26,4 +26,4 @@ end
 
 
 prime_factors(13195)
-prime_factors(84)
+prime_factors(82)
