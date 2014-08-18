@@ -25,5 +25,5 @@ end
 
 
 
-prime_factors(13195)
+prime_factors(1395)
 prime_factors(82)
