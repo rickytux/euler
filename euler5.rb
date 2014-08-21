@@ -1,53 +1,20 @@
-def countup
-	num = 1
-	until checker(num)
-		num += 1
+def countup(num)
+	test = 1
+	until checker(test, num)
+		test += 1
 	end
-	puts "The first number evenly divisible by 1 to 20 is #{num}"
+	puts "The first number evenly divisible by 1 to #{num} is #{test}"
 end
 
 
-def checker(num)
-	if num % 20 == 0
-		if num % 19 == 0
-			if num % 18 == 0
-				if num % 17 == 0
-					if num % 16 == 0
-						if num % 15 == 0
-							if num % 14 == 0
-								if num % 13 == 0
-									if num % 12 == 0
-										if num % 11 == 0
-											if num % 10 == 0
-												if num % 9 == 0
-													if num % 8 == 0
-														if num % 7 == 0
-															if num % 6 == 0
-																if num % 5 == 0
-																	if num % 4 == 0
-																		if num % 3 == 0
-																			if num % 2 == 0
-																				if num % 1 == 0
-																					return true
-																				end
-																			end
-																		end
-																	end
-																end
-															end
-														end
-													end
-												end
-											end
-										end
-									end
-								end
-							end
-						end
-					end
-				end
-			end
+def checker(num, top)
+	x =1
+	until x == top + 1 
+		if num % x != 0
+			return false
 		end
+		x+=1
 	end
+	return true
 end
-countup
+countup(15)
