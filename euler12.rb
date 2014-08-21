@@ -20,10 +20,13 @@ end
 def find_triangles
 	next_triangle = 0
 	triangles = [1,3]
+	difference = 3
 	until divisors(triangles[-1])
 		# binding.pry
-		next_triangle = triangles[-1] + (triangles[-1]-triangles[-2]+1)
+		next_triangle = triangles[-1] + difference
 		triangles << next_triangle
+		difference +=1
+		puts triangles[-1]
 	end
 	p triangles[-1]
 end
