@@ -1,9 +1,9 @@
 def countup
 	num = 1
 	until checker(num)
-		num++
+		num += 1
 	end
-	print num
+	puts "The first number evenly divisible by 1 to 20 is #{num}"
 end
 
 
