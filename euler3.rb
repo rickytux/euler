@@ -1,7 +1,9 @@
-require 'Prime'
+require 'prime'
+require 'pry'
 require 'pry-nav'
 
 def find_next_prime(num)
+  num +=1
   unless num.prime?
     num +=1
   end
@@ -9,21 +11,28 @@ def find_next_prime(num)
 end
 
 def prime_factors(num)
-  binding.pry
+  test = num
   factorals = []
   factor = 2
-  while num.prime?
-    if num % factor == 0
-      num = num / factor
+  until test.prime?
+    # binding.pry
+    if test % factor == 0
+      test = test / factor
       factorals << factor
-      puts factorals
     end
     factor = find_next_prime(factor)
   end
-  puts factorals
+  factorals << test
+
+  biggest = factorals[0]
+  factorals.each do |x|
+    if x > biggest
+      biggest = x
+    end
+  end
+  puts "The largest prime factor of #{num} is #{biggest}"
 end
 
 
 
-prime_factors(13195)
-prime_factors(84)
+prime_factors(600851475143)
