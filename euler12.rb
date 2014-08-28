@@ -26,7 +26,6 @@ def find_triangles
 		next_triangle = triangles[-1] + difference
 		triangles << next_triangle
 		difference +=1
-		puts triangles[-1]
 	end
 	p triangles[-1]
 end
